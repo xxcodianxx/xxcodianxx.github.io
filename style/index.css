@@ -1,0 +1,57 @@
+@import "base.css";
+
+body {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    background-color: #0f162a;
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#space {
+    overflow: hidden;
+    position: relative;
+}
+
+#content {
+    /* This will ge overridden by space.js when the background generation is done! */
+    display: none;
+
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+#github-icon { background-image: url('../res/github.png'); }
+#discord-icon { background-image: url('../res/discord.png'); }
+
+#discord-name {
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.fadeable {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.blurrable {
+    user-select: none;
+    filter: blur(100px);
+}
+
+.blur-in {
+    user-select: initial;
+    filter: blur(0px);
+    transition: 1s filter;
+}
